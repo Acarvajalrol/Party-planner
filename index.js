@@ -69,10 +69,13 @@ const PartyDetails = () => {
   const $section = document.createElement("section");
   const $h3 = document.createElement("h3");
   const $p = document.createElement("p");
+  const $address = document.createElement("address");
   $section.classList.add("party");
-  $h3.textContent = `${selectedParty.name} ${selectedParty.id}`;
+  $h3.textContent = `${selectedParty.name} #${selectedParty.id}`;
+  $address.textContent = `${selectedParty.location}`;
   $p.textContent = `${selectedParty.date} ${selectedParty.description}`;
   $section.append($h3);
+  $section.append($address);
   $section.append($p);
   return $section;
 };
